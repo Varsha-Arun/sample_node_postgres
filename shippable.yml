@@ -1,10 +1,17 @@
-
-#build_image: shippableimages/ubuntu1204_nodejs
-
 language: node_js
 
 node_js:
+  - 0.8
   - 0.10.25
+  - 0.11
+  - "0.12"
+  - "iojs-v1"
+  - "iojs-v2"
+  - "iojs-v3"
+  - "4.0"
+  - "4.2.2"
+  
+build_image: drydock/u14nodpls:tip
 
 # For xunit-file module to put results in shippable folder
 env:
@@ -41,7 +48,7 @@ after_script:
   - ./node_modules/.bin/istanbul report cobertura --dir shippable/codecoverage/
   -  cat ~/.gitconfig
   
-commit_container: vidyar/sample_node_postgres
+#commit_container: vidyar/sample_node_postgres
 after_failure:
  - echo $user
 
