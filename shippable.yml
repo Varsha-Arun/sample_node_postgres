@@ -4,12 +4,12 @@ node_js:
   - 0.8
   - 0.10.25
   - 0.11
-  - "0.12"
-  - "iojs-v1"
-  - "iojs-v2"
-  - "iojs-v3"
-  - "4.0"
-  - "4.2.2"
+ # - "0.12"
+  #- "iojs-v1"
+  #- "iojs-v2"
+  #- "iojs-v3"
+  #- "4.0"
+  #- "4.2.2"
   
 build_image: drydock/u14nodpls:tip
 
