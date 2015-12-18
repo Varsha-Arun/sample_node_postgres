@@ -34,8 +34,6 @@ before_script:
   - psql -c 'CREATE DATABASE app_test;' -U postgres
   - echo $foo
 
-
-
 script:
   - npm test
   - echo $foo
@@ -55,9 +53,6 @@ after_script:
 after_failure:
  - echo $user
 
-addons:
-    postgresql : "9.2"
-  
 notification:
   email: false
 
